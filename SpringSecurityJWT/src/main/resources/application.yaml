@@ -1,0 +1,25 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: Tasks
+  datasource:
+    name: ToDo List
+    url: jdbc:postgresql://localhost:5432/WebStore
+    username:
+    password:
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 2
+  jpa:
+    properties:
+      hibernate-dialect: org.hibernate.dialect.PostgreSQLDialect
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  mvc:
+    view:
+      prefix: /templates/
+      suffix: .html
